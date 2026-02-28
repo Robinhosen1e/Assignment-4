@@ -5,6 +5,8 @@ function sectionShow(id){
         sec.classList.remove("active");
     });
     document.getElementById(id).classList.add("active");
+
+    JobCount(id)
 }
 
 function CountJob(){
@@ -16,8 +18,31 @@ function CountJob(){
    document.getElementById("interview-job-count").innerText = interviewJob;
    document.getElementById("rejected-job-count").innerText = rejectedJob;
 
-   JobCount.innerText = totalJob +" " + "Job";
+   const activeSection = document.querySelector(".section.active").id;
+   JobCount(activeSection);
+
    checkEmpty()
+}
+
+function JobCount(sectionId){
+
+   const totalJob = document.querySelectorAll("#all .job-card").length;
+   const interviewJob = document.querySelectorAll("#interview .job-card").length;
+   const rejectedJob = document.querySelectorAll("#rejected .job-card").length;
+
+   const jobCountText = document.getElementById("JobCount");
+
+   if(sectionId === "all"){
+       jobCountText.innerText = totalJob + " Job";
+   }
+
+   else if(sectionId === "interview"){
+       jobCountText.innerText = interviewJob + " of " + totalJob + " Job";
+   }
+
+   else if(sectionId === "rejected"){
+       jobCountText.innerText = rejectedJob + " of " + totalJob + " Job";
+   }
 }
 
 function checkEmpty(){
