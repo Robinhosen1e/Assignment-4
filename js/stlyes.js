@@ -7,10 +7,6 @@ function sectionShow(id){
     document.getElementById(id).classList.add("active");
 }
 
-let rejectedList = [];
-let interviewList = [];
-let currentStatus = 'all'
-
 function CountJob(){
    const totalJob = document.querySelectorAll("#all .job-card").length;
    const interviewJob = document.querySelectorAll("#interview .job-card").length;
