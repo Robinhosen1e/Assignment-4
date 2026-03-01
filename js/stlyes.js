@@ -111,7 +111,7 @@ document.addEventListener("click", function(event){
     }
 
     
-    if(event.target.classList.contains("reject-btn")){
+   else if(event.target.classList.contains("reject-btn")){
 
         deleteExistJobCard(id);
 
@@ -129,7 +129,7 @@ document.addEventListener("click", function(event){
     }
 
     
-    if(event.target.classList.contains("delete-btn")){
+   else if(event.target.classList.contains("delete-btn")){
         card.remove();
         CountJob();
     }

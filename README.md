@@ -14,9 +14,9 @@ Ans:It is a type of machine, imagine a card able  home section, then if I click 
 
 4. What is Event Delegation in JavaScript? Why is it useful?
 
-Ans:
+Ans:The simple answer is the parent element to manage all child elements. It can be done through event delegation.
 
 5. What is the difference between preventDefault() and stopPropagation() methods?
 
-Ans:
+Ans:event.preventDefault() stops the browser's default action for an event, while event.stopPropagation() stops the event from ,
 
